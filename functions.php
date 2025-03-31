@@ -573,7 +573,7 @@ function get_translate($text)
     if (!$err) {
         // get the translation success
         $response = json_decode($response, true);
-        return $response['data']['translations']["translatedText"];
+        return $response['data']['translations']["translatedText"][0];
     } else {
         return '';
     }
